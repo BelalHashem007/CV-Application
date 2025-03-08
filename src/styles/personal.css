@@ -1,0 +1,49 @@
+.personal {
+    text-align: center;
+    position: relative;
+}
+.personal p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.personal button {
+    position: absolute;
+    background-color: rgb(173, 20, 20);
+    top: 0;
+    right: 0;
+    color: white;
+    width: 40px;
+    font-size: 1rem;
+}
+.personal button:hover {
+    cursor: pointer;
+    background-color: lightcoral;
+}
+.edit-personal {
+    display: flex;
+    flex-wrap: wrap;
+}
+.edit-personal >* {
+    margin: 20px;
+}
+.edit-personal button {
+    max-width: 80px;
+    min-height: 30px;
+    margin-right: 0;
+    padding: 5px;
+}
+.edit-personal .cancel:hover, .edit-personal .confirm:hover {
+    cursor: pointer;
+}
+.edit-personal .confirm {
+    background-color: #4CAF50;
+    color: white;
+}
+.edit-personal .confirm:hover {
+    background-color: green;
+}
+.edit-personal > label > input {
+    margin-left: 5px;
+    padding: 5px;
+    font-size: 0.9rem;
+}
