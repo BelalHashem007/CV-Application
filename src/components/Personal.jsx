@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/personal.css";
-export default function Personal() {
+function Personal() {
   const initialPersonal = {
     fullName: "Belal Hashem",
     phone: "123-456-7890",
@@ -94,8 +94,14 @@ function EditPersonal({
           setTempPersonal({ ...tempPersonal, gitLink: e.target.value })
         }
       />
-      <button className="cancel" onClick={handleCancel}>Cancel</button>
-      <button className="confirm" onClick={handleConfirm}>Confirm</button>
+      <div className="buttons">
+        <button className="cancel" onClick={handleCancel}>
+          Cancel
+        </button>
+        <button className="confirm" onClick={handleConfirm}>
+          Confirm
+        </button>
+      </div>
     </div>
   );
 }
@@ -108,3 +114,5 @@ function Label({ label, value, onChange, type = "text" }) {
     </label>
   );
 }
+
+export { Personal, Label };

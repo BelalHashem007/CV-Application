@@ -1,0 +1,45 @@
+.education { 
+    position: relative;
+}
+.education li {
+    position: relative;
+    margin-bottom: 40px;
+}
+.education ul, .edit-education  {
+    list-style-type: none;
+}
+.education hr {
+    margin: 10px 0 10px 0;
+}
+.education .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0.7;
+}
+.education ul h3 , .education ul .city{
+    display: inline-block;
+}
+.education li > *{
+    margin-bottom: 5px;
+}
+.edit-education li >label +label {
+    margin-left: 20px;
+}
+.edit-education input {
+    padding: 5px;
+    margin-left: 5px;
+}
+.edit-education  label {
+    display: inline-block;
+    margin-top: 20px;
+}
+.edit-education li {
+    position: relative;
+}
+.edit-education {
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-around;
+    
+}

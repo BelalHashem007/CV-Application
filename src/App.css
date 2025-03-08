@@ -10,4 +10,58 @@ body {
     max-width: 900px;
     margin: 0 auto;
     background-color: white;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 1rem;
+}
+.edit:hover {
+    cursor: pointer;
+    background-color: lightcoral;
+}
+.edit {
+    position: absolute;
+    background-color: rgb(173, 20, 20);
+    top: 0;
+    right: 10px;
+    font-size: 1rem;
+    color: white;
+    width: 60px;
+}
+.remove {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: red;
+    font-size: 1.2rem;
+}
+.remove:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+.confirm {
+    background-color: #4CAF50;
+    color: white;
+}
+.confirm:hover {
+    cursor: pointer;
+    background-color: green;
+}
+.add {
+    background-color: #03A9F4;
+    color: white;
+}
+.add:hover {
+    cursor: pointer;
+    background-color: lightskyblue;
+}
+.cancel:hover {
+    cursor: pointer;
+}
+.buttons {
+    margin-top: 40px;
+}
+button {
+    margin-right: 20px;
+    padding: 5px;
+    min-height: 30px;
 }
