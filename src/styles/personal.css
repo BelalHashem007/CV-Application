@@ -26,3 +26,8 @@
 .edit-personal .buttons {
     margin-left: 50px;
 }
+@media (max-width:500px){
+    .personal {
+        padding-top: 40px;
+    }
+}

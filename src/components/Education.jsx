@@ -86,7 +86,6 @@ function EditEducation({
       degree: "",
       finalYearProject: "",
     };
-    console.log(newEdu);
     setIndex(index + 1);
     setTempEducations([...tempEducations, newEdu]);
   }

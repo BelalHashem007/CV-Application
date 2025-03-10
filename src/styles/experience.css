@@ -1,0 +1,72 @@
+.experience > ul {
+    list-style-type: none;
+}
+ul  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+.experience > ul > li {
+    margin-bottom: 30px;
+    position: relative;
+}
+.experience > ul > li > p {
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.experience { 
+    position: relative;
+}
+.edit-experience {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.edit-experience label+label {
+    margin-left: 5px;
+}
+.edit-experience > li > label {
+    display: inline-block;
+    margin-top:  30px;
+}
+.edit-experience input {
+    margin-left: 10px;
+    padding: 5px;
+}
+.experience-responsibilities label{
+    display: block;
+}
+.experience-responsibilities input {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.experience-responsibilities {
+    margin-top: 10px;
+}
+.add-responsibility {
+    margin: 0 auto;
+    display: flex;
+    margin-top: 10px;
+}
+.experience-responsibilities li {
+    position: relative;
+}
+.remove-responsibility {
+    position: absolute;
+    left: 110px;
+    color: red;
+    padding: 0 10px 0 10px;
+}
+.remove-responsibility:hover {
+    cursor: pointer;
+    background-color: brown;
+}
+@media (max-width:500px) {
+    .experience .date {
+        top: 100%;
+        left: 0;
+    }
+    .experience ul {
+        margin-bottom: 50px;
+    }
+}
