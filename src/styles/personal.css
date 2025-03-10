@@ -19,12 +19,14 @@
 }
 
 .edit-personal > label > input {
-    margin-left: 5px;
     padding: 5px;
     font-size: 0.9rem;
 }
 .edit-personal .buttons {
     margin-left: 50px;
+}
+.edit-personal label,.edit-personal input{
+    display: block;
 }
 @media (max-width:500px){
     .personal {

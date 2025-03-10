@@ -16,10 +16,10 @@ ul  ul {
 .experience { 
     position: relative;
 }
-.edit-experience {
+.edit-experience  {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 .edit-experience label+label {
     margin-left: 5px;
@@ -29,13 +29,16 @@ ul  ul {
     margin-top:  30px;
 }
 .edit-experience input {
-    margin-left: 10px;
+    margin-left: 5px;
+    padding: 5px;
+}
+.edit-experience textarea {
     padding: 5px;
 }
 .experience-responsibilities label{
     display: block;
 }
-.experience-responsibilities input {
+.experience-responsibilities textarea {
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -69,4 +72,12 @@ ul  ul {
     .experience ul {
         margin-bottom: 50px;
     }
+}
+.edit-experience label, .edit-experience textarea{
+    display: block;
+}
+.edit-experience textarea {
+    overflow: auto;
+    resize: none;
+    height: 50px;
 }

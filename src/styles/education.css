@@ -15,30 +15,37 @@
 .education li > *{
     margin-bottom: 5px;
 }
-.edit-education li >label +label {
-    margin-left: 20px;
-}
+
 .edit-education input {
     padding: 5px;
-    margin-left: 5px;
 }
 .edit-education  label {
-    display: inline-block;
+    display: block;
     margin-top: 20px;
+}
+.edit-education input {
+    display: block;
 }
 .edit-education li {
     position: relative;
 }
-.edit-education {
-    display: flex;
+.edit-education  li{
+    display: flex;  
     flex-wrap: wrap ;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .edit-education li+li {
-    margin-top: 40px;
+    margin-top: 20px;
+}
+.edit-education .buttons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media (max-width:500px) {
     .education .date {
+        margin-top: 10px;
         top: 100%;
         left: 0;
     }

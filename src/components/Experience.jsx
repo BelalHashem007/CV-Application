@@ -59,7 +59,14 @@ const initialExperience = [
     ],
   },
 ];
-
+function TextArea({label, value, onChange}){
+  return (
+    <label>
+      {label}
+      <textarea value={value} onChange={onChange}></textarea>
+    </label>
+  );
+}
 export default function Experience() {
   const [Experiences, setExperiences] = useState(initialExperience);
   const [isEdit, setIsEdit] = useState(false);
@@ -204,7 +211,7 @@ function EditExperience({
             {experience.mainResponsibilities.map((respon) => (
               <li key={respon.id}>
                 <div className="remove-responsibility" onClick={()=> removeResponHandler(respon.id,experience.id)}>Delete</div>
-                <Label
+                <TextArea
                   label="Responsibility"
                   value={respon.text}
                   onChange={(e) =>
