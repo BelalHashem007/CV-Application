@@ -13,6 +13,7 @@ body {
     margin-top: 40px;
     padding: 20px;
     font-size: 1.1rem;
+    margin-bottom: 100px;
 }
 .edit:hover {
     cursor: pointer;
@@ -73,9 +74,4 @@ hr {
     top: 0;
     right: 0;
     opacity: 0.7;
-}
-@media (max-width:500px){
-    .personal {
-        padding-top: 40px;
-    }
 }
