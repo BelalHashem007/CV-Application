@@ -59,7 +59,7 @@ const initialExperience = [
     ],
   },
 ];
-function TextArea({label, value, onChange}){
+function TextArea({ label, value, onChange }) {
   return (
     <label>
       {label}
@@ -153,12 +153,32 @@ function EditExperience({
   }
 
   function addResponsibilityHandler(index) {
-    const newRespon = {id: crypto.randomUUID(), text: ""} 
-    setTempExperiences(tempExperiences.map(exp=> exp.id === index ? {...exp, mainResponsibilities:[...exp.mainResponsibilities, newRespon]}: exp))
+    const newRespon = { id: crypto.randomUUID(), text: "" };
+    setTempExperiences(
+      tempExperiences.map((exp) =>
+        exp.id === index
+          ? {
+              ...exp,
+              mainResponsibilities: [...exp.mainResponsibilities, newRespon],
+            }
+          : exp
+      )
+    );
   }
 
-  function removeResponHandler(resIndex,expIndex){
-    setTempExperiences(tempExperiences.map(exp => exp.id === expIndex ? {...exp, mainResponsibilities:exp.mainResponsibilities.filter(res=> res.id !==resIndex)}: exp))
+  function removeResponHandler(resIndex, expIndex) {
+    setTempExperiences(
+      tempExperiences.map((exp) =>
+        exp.id === expIndex
+          ? {
+              ...exp,
+              mainResponsibilities: exp.mainResponsibilities.filter(
+                (res) => res.id !== resIndex
+              ),
+            }
+          : exp
+      )
+    );
   }
 
   return (
@@ -168,49 +188,56 @@ function EditExperience({
           <div className="remove" onClick={() => removeHandler(experience.id)}>
             X
           </div>
-          <Label
-            label="Position title"
-            value={experience.positionTitle}
-            onChange={(e) =>
-              setTempExperiences((prevTemp) =>
-                prevTemp.map((exp) =>
-                  exp.id === experience.id
-                    ? { ...exp, positionTitle: e.target.value }
-                    : exp
+          <div className="label-container">
+            <Label
+              label="Position title"
+              value={experience.positionTitle}
+              onChange={(e) =>
+                setTempExperiences((prevTemp) =>
+                  prevTemp.map((exp) =>
+                    exp.id === experience.id
+                      ? { ...exp, positionTitle: e.target.value }
+                      : exp
+                  )
                 )
-              )
-            }
-          />
-          <Label
-            label="Company Name"
-            value={experience.companyName}
-            onChange={(e) =>
-              setTempExperiences((prevTemp) =>
-                prevTemp.map((exp) =>
-                  exp.id === experience.id
-                    ? { ...exp, companyName: e.target.value }
-                    : exp
+              }
+            />
+            <Label
+              label="Company Name"
+              value={experience.companyName}
+              onChange={(e) =>
+                setTempExperiences((prevTemp) =>
+                  prevTemp.map((exp) =>
+                    exp.id === experience.id
+                      ? { ...exp, companyName: e.target.value }
+                      : exp
+                  )
                 )
-              )
-            }
-          />
-          <Label
-            label="Date"
-            value={experience.dates}
-            onChange={(e) =>
-              setTempExperiences((prevTemp) =>
-                prevTemp.map((exp) =>
-                  exp.id === experience.id
-                    ? { ...exp, dates: e.target.value }
-                    : exp
+              }
+            />
+            <Label
+              label="Date"
+              value={experience.dates}
+              onChange={(e) =>
+                setTempExperiences((prevTemp) =>
+                  prevTemp.map((exp) =>
+                    exp.id === experience.id
+                      ? { ...exp, dates: e.target.value }
+                      : exp
+                  )
                 )
-              )
-            }
-          />
+              }
+            />
+            </div>
           <ul className="experience-responsibilities">
             {experience.mainResponsibilities.map((respon) => (
               <li key={respon.id}>
-                <div className="remove-responsibility" onClick={()=> removeResponHandler(respon.id,experience.id)}>Delete</div>
+                <div
+                  className="remove-responsibility"
+                  onClick={() => removeResponHandler(respon.id, experience.id)}
+                >
+                  Delete
+                </div>
                 <TextArea
                   label="Responsibility"
                   value={respon.text}

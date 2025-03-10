@@ -19,21 +19,21 @@ ul  ul {
 .edit-experience  {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
 }
-.edit-experience label+label {
-    margin-left: 5px;
-}
-.edit-experience > li > label {
-    display: inline-block;
-    margin-top:  30px;
+.label-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .edit-experience input {
-    margin-left: 5px;
     padding: 5px;
+    display: block;
 }
-.edit-experience textarea {
-    padding: 5px;
+.edit-experience .buttons {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
 }
 .experience-responsibilities label{
     display: block;
@@ -42,6 +42,10 @@ ul  ul {
     width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
+    padding: 5px;
+    overflow: auto;
+    resize: none;
+    min-height: 60px;
 }
 .experience-responsibilities {
     margin-top: 10px;
@@ -75,9 +79,4 @@ ul  ul {
 }
 .edit-experience label, .edit-experience textarea{
     display: block;
-}
-.edit-experience textarea {
-    overflow: auto;
-    resize: none;
-    height: 50px;
 }
